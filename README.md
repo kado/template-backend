@@ -7,6 +7,7 @@ Backend example ExpressJS and JS
 
 # Instrucciones para ejecutar el código fuente:
 Para correr en sus maquinas: 
+0. Si lo deseas pueden hacer Fork al repositorio y continuan los pasos siguientes cambiando la URL del repositorio.
 1. Abrir CMD, Terminal o Shell para ejecutar comando: git clone https://github.com/kado/template-backend.git
 2. Ubicarse en la carpeta del proyecto e instalar las dependencias con el comando: npm install
 3. Para correr el proyecto ejecutar: npm start o node index.js

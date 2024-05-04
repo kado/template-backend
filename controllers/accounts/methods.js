@@ -23,7 +23,7 @@ const registerUser = async (payload) => {
         return newUser;
     }catch (error) {
         console.log(error);
-        if (error.code === 11000) throw new error('Usuario no disponible');
+        if (error.code === 11000) throw new Error('Usuario no disponible');
         else throw error;
     }
 };
@@ -31,10 +31,10 @@ const registerUser = async (payload) => {
 const loginUser = async (username, password) => {
 
     const user = await User.findOne({ nickname: username });
-    if (!user) throw new error('Usuario no encontrado.');
+    if (!user) throw new Error('Usuario no encontrado.');
 
     const passwordMatch = await user.comparePassword(password);
-    if (!passwordMatch) throw new error('Contraseña invalida.');
+    if (!passwordMatch) throw new Error('Contraseña invalida.');
 
     return await createToken(username, "normal");
 

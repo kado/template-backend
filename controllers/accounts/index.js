@@ -7,7 +7,7 @@ router.post('/register', async (req, res) => {
         const user = await accountsMethods.registerUser(req.body);
         res.status(200).json({
             message: 'Usuario registrado exitosamente.',
-            data: user
+            data: user.nickname
         });
     }catch (error) {
         res.status(400).json(error);
